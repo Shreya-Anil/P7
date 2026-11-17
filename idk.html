@@ -1,0 +1,110 @@
+<!-- Author: Shreya Anil -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practicum 7 - Responsive Image Gallery</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f7;
+      padding: 30px 15px;
+    }
+    .gallery-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 35px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.75rem;
+      color: #666666;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+    .gallery-item {
+      width: 100%;
+      height: 160px;
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: #e0e0e0;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 15px 10px;
+      }
+      .gallery-container {
+        padding: 20px 15px;
+      }
+      h1 {
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+      }
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .gallery-item {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <h1>Responsive Image Gallery</h1>
+    <div class="image-grid">
+      <div class="gallery-item">
+        <img src="https://img.magnific.com/premium-photo/majestic-peak-vibrant-mountain-landscape_1342679-12919.jpg?semt=ais_hybrid&w=740&q=80" alt="Mountain Landscape">
+      </div>
+      <div class="gallery-item">
+        <img src="https://media.istockphoto.com/id/183296650/photo/scotland.jpg?s=612x612&w=0&k=20&c=qQWnMj9wE2ebiC6bHfQklwW6UquoK_6eMf3ZzGnAln0=" alt="River Valley">
+      </div>
+      <div class="gallery-item">
+        <img src="https://res.cloudinary.com/djcyhbk2e/image/upload/c_scale,f_auto,q_35,w_1400/v1/gvv/prod/uihpnvxisltmczcfr5yy" alt="Ocean Cliff">
+      </div>
+      <div class="gallery-item">
+        <img src="https://img.magnific.com/free-photo/scenic-view-mountains-lake_53876-138187.jpg?semt=ais_hybrid&w=740&q=80" alt="Scenic View">
+      </div>
+      <div class="gallery-item">
+        <img src="https://t3.ftcdn.net/jpg/01/76/49/04/360_F_176490466_umk6agJJkM0kEhM3bj1q9IidD66FiqmS.jpg" alt="Forest Path">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZOpdvF5M5GoDC2d0RA8rSRMjlybPZOF52NT92yMaB-oCzzr4dLh0V98&s=10" alt="Waterfall">
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUDf0EWidI1TCZOlw26rx7J-GyJAETSmzSpFJ0oW1rAfrd9_7qL_ypA_Q&s=10" alt="Coastal Bay">
+      </div>
+      <div class="gallery-item">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/075/332/864/small/the-blue-lake-in-the-middle-of-the-crater-is-surrounded-by-clouds-photo.jpeg" alt="Blue Lake">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
